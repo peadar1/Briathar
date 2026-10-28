@@ -1,0 +1,38 @@
+{
+  "name": "@briathra/conjugator",
+  "version": "0.1.0",
+  "description": "Irish verb conjugation engine (An Caighdeán Oifigiúil) with explanation traces, answer checking and English glosses",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "irish",
+    "gaeilge",
+    "verbs",
+    "conjugation",
+    "grammar"
+  ],
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "vitest": "^5.0.5"
+  }
+}

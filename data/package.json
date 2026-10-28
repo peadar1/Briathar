@@ -1,0 +1,16 @@
+{
+  "name": "@briathra/data",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "tsx scripts/fetch.ts",
+    "extract": "tsx scripts/extract.ts",
+    "oracle": "dotnet run --project oracle/Oracle.csproj -- ..",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "fflate": "^0.8.3",
+    "tsx": "^4.23.15"
+  }
+}

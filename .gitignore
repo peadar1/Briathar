@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.vite/
+data/.cache/
+.pglite/
+data/oracle/bin/
+data/oracle/obj/
+.claude/
+*.tsbuildinfo

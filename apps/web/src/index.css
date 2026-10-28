@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/fraunces';
+@import '@fontsource/uncial-antiqua';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f8f5ee;
+  --surface: #ffffff;
+  --surface-muted: #f1ece0;
+  --ink: #17251f;
+  --ink-muted: #5d6b64;
+  --line: #e2dccd;
+  --primary: #1f5c46;
+  --primary-hover: #174837;
+  --primary-ink: #ffffff;
+  --primary-soft: #e3efe8;
+  --accent: #b9771f;
+  --accent-soft: #f7ead2;
+  --success: #2b7a4b;
+  --success-soft: #e2f3e8;
+  --danger: #b03a2e;
+  --danger-soft: #fbe6e3;
+  --warning: #8a5a00;
+  --warning-soft: #fdf0d6;
+  --ring: #2f8a66;
+}
+
+.dark {
+  --bg: #0e1613;
+  --surface: #15201b;
+  --surface-muted: #1b2822;
+  --ink: #e7efe9;
+  --ink-muted: #9db0a6;
+  --line: #2a3a32;
+  --primary: #4fb38a;
+  --primary-hover: #63c49b;
+  --primary-ink: #0b1a14;
+  --primary-soft: #1a3329;
+  --accent: #e0a84a;
+  --accent-soft: #3a2e17;
+  --success: #5cc48a;
+  --success-soft: #16301f;
+  --danger: #f08070;
+  --danger-soft: #3a1c18;
+  --warning: #f0c060;
+  --warning-soft: #352a12;
+  --ring: #63c49b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-ink: var(--primary-ink);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-ring: var(--ring);
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
+  --font-uncial: 'Uncial Antiqua', var(--font-serif);
+
+  --animate-pop: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
